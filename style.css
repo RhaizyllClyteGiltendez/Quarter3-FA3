@@ -1,0 +1,111 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('sweet.jpg') no-repeat center center fixed, 
+                linear-gradient(to bottom right, #ffd1dc, #ffebf0); 
+    background-size: cover;
+    color: #7a3b69;
+}
+
+
+.title-box {
+    background: rgba(255, 240, 245, 0.8); 
+    padding: 14px 32px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 12px rgba(255, 120, 150, 0.4);
+    display: inline-block;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 600;
+    font-family: 'Dancing Script', cursive;
+    color: #6a1f44;
+    text-shadow: 0px 3px 8px rgba(255, 120, 150, 0.4);
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+
+button {
+    padding: 14px 32px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background: #ffc1cc;
+    color: #6a1f44;
+    box-shadow: 0 4px 12px rgba(255, 120, 150, 0.4);
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px; 
+    position: relative;
+    overflow: hidden;
+}
+
+
+button:hover {
+    background: #ff8ea3;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(255, 120, 150, 0.5);
+}
+
+
+button::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+button:hover::before {
+    opacity: 1;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.choco {
+    position: absolute;
+    width: 40px; 
+    height: auto;
+    opacity: 0.8;
+    animation: floatChoco 5s infinite alternate ease-in-out;
+}
+
+
+@keyframes floatChoco {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
+}
+
+
+
+.choco:nth-child(2) { top: 20%; left: 80%; animation-delay: 1s; }
+.choco:nth-child(5) { top: 85%; left: 15%; animation-delay: 4s; }
+.choco:nth-child(7) { top: 75%; left: 85%; animation-delay: 3.5s; }
